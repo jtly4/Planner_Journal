@@ -1,2 +1,2 @@
 # Planner
-A planner for all your scheduling needs!
+A planner and journal; look back on memories and add expenses.
