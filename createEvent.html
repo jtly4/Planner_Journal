@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <h2>Create Event</h2>
+    <form action="/event_form" method="POST">
+        <!-- name of event , date, time, description, where, list, atendees, tranport -->
+        <label for="eventName">Event Name</label><br>
+        <input type="text" id="eventName" name="eventName" placeholder ="Event Name" minlength = "1" maxlength = "20" required><br>
+
+        <label for="eventDate">Date:</label><br>
+        <input type="date" id="eventDate" name="eventDate" required><br>
+
+        <label for="startTime">Time:</label><br>
+        <input type = "time" id="startTime" name="startTime" >
+        <label for="eventTime">to </label>
+        <input type = "time" id="endTime" name="startTime" ><br>
+
+        <label for="eventDescription">Description/Notes:</label><br>
+        <textarea id = "eventDescription" rows = "4" cols = "26" name ="eventDescription"></textarea><br>
+
+        <label for="Where">Where:</label><br>
+        <input type="text" id = "eventLoc" name = "eventLoc" placeholder = "123 Apple Street"><br>
+
+        <label for="eventToDo">To Do Beforehand:</label><br>
+        <span>
+            <fieldset>
+                <input type = "text" id = "tdOne" name = "tdOne" maxlength = "120" placeholder = "to do"><br>
+                <input type = "text" id = "tdTwo" name = "tdTwo" maxlength = "120" placeholder = "to do"><br>
+                <input type = "text" id = "tdThree" name = "tdThree" maxlength = "120" placeholder = "to do"><br>
+            </fieldset>
+        </span>
+
+        <label for="eventAttendees">Attendees:</label><br>
+        <textarea id = "eventAttendees" name = "eventAttendees" rows = "4" cols = "26"></textarea><br>
+        
+        <label for="eventTransport">Method of Transportation:</label><br>
+        <input type="text" id = "eventTransport" name = "eventTransport" placeholder = "transportation"><br>
+
+        <input type="submit" value="Send">
+    </form>
+    </body>
+</html>
