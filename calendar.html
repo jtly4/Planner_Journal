@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+    <nav class = "navbar">
+        <div class = "navbar_container">
+            <h1><a href="home.html" class="navbar_links">Planner</a></h1>
+            <ul class="navbar_menu">
+                <li class="navbar_item">
+                    <a href="calendar.html" class="navbar_links">
+                        <u>Calendar</u>
+                    </a>
+                </li>
+                <li class="navbar_item">
+                    <a href="q&a.html" class="navbar_links">
+                        <u>FAQs</u>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class ="calendar">
+        <div class ="calendar_inner">
+            <div class = "calendar_controls">
+                <div class ="calendar_headings">
+                    <i class ="left_arrow" id ="prev">&larr;</i>
+                    <h2 class ="month_year">May 2024</h2>
+                    <i class ="right_arrow" id ="next">&rarr;</i>
+                </div>
+                <div class = "current_datetime">
+                    <p class ="daytxt">Today</p>
+                    <p class = "datetxt">Fri, 3, May 2024</p>
+                </div>
+                <div class ="days_date">
+                    <ul class ="days">
+                        <li>Sun</li>
+                        <li>Mon</li>
+                        <li>Tue</li>
+                        <li>Wed</li>
+                        <li>Thu</li>
+                        <li>Fri</li>
+                        <li>Sat</li>
+                    </ul>
+                    <ul class ="dates">
+                        <li>1</li>
+                        <li>2</li>
+                        <li class = "active">3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class ="cur_week">
+        <div id="sun" class ="week">
+            <div class ="date_top">
+                <p class="topWeek_txt">Sun</p>
+                <p class="topWeek_txt">5</p>
+            </div>
+
+        </div>
+        <div id="mon" class ="week">
+            <div class ="date_top">
+                <p class="topWeek_txt">Mon</p>
+                <p class="topWeek_txt">6</p>
+            </div>
+
+        </div>
+        <div id="tue" class ="week">
+            <div class ="date_top">
+                <p class="topWeek_txt">Tue</p>
+                <p class="topWeek_txt">7</p>
+            </div>
+
+        </div>
+        <div id="wed" class ="week">
+            <div class ="date_top">
+                <p class="topWeek_txt">Wed</p>
+                <p class="topWeek_txt">8</p>
+            </div>
+
+        </div>
+        <div id="thu" class ="week">
+            <div class ="date_top">
+                <p class="topWeek_txt">Thu</p>
+                <p class="topWeek_txt">9</p>
+            </div>
+
+        </div>
+        <div id="fri" class ="week">
+            <div class ="date_top">
+                <p class="topWeek_txt">Fri</p>
+                <p class="topWeek_txt">10</p>
+            </div>
+
+        </div>
+        <div id="sat" class ="week">
+            <div class ="date_top">
+                <p class="topWeek_txt">Sat</p>
+                <p class="topWeek_txt">11</p>
+            </div>
+
+        </div>
+    </div>
+
+    <button type="button" id="createEvent_btn"><a href="createEvent.html">Create Event</a></button>
+    <div class="upcoming">
+        <h3 id="upcoming_txt">Upcoming:</h3>
+    </div>
+</body>
+</html>

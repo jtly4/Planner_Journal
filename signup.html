@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class = "navbar">
+        <div class = "navbar_container">
+            <h1><a href="home.html" class="navbar_links">Planner</a></h1>
+            <ul class="navbar_menu">
+                <li class="navbar_item">
+                    <a href="login.html" class="navbar_links">
+                        Log In
+                    </a>
+                </li>
+                <li class="navbar_item">
+                    <a href="signup.html" class="navbar_links">
+                        Sign Up
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h2 id="signUp_title">Create Account</h2>
+    <img src ="/images/journal_icon.png" id="signUp_journal">
+    <fieldset id="signUp_box">
+        <form action="/account_creation" method="POST">
+            <input type="email" id="email" class ="signUp_input" name="email" placeholder ="Email Address" required><br>
+
+            <input type="password" id="password" class ="signUp_input" name="password" placeholder = "Password" minilength = "8" required><br>
+            
+            <input type="passwordConfirm" id="passwordConfirm" class ="signUp_input" name="passwordConfirm" placeholder = "Confrim Password" minilength = "8" required><br>
+
+            <label for ="sync" class ="signUp_input">Sync with Google Calendar?</label>
+            <input type ="checkbox" id ="sync" ><br>
+
+            <input type="submit" value="Create Account" class ="signUp_create">
+        </form>
+    </fieldset>
+</body>
+</html>

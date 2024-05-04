@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Close Event</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <nav class = "navbar">
+        <div class = "navbar_container">
+            <h1><a href="home.html" class="navbar_links">Planner</a></h1>
+            <ul class="navbar_menu">
+                <li class="navbar_item">
+                    <a href="calendar.html" class="navbar_links">
+                        <u>Calendar</u>
+                    </a>
+                </li>
+                <li class="navbar_item">
+                    <a href="q&a.html" class="navbar_links">
+                        <u>FAQs</u>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h2>Close Event</h2>
+    <form action="/close_event_form" method="POST" enctype="multipart/form-data">
+        <!-- rating, reflection, add photos, expenses + split -->
+        
+        <fieldset>
+            <label for="rating">How did it go?</label><br>
+            <span class="rating_group">
+                <img src="/images/angry_icon.png" height = "50" alt ="this is an angry icon">
+                <input type="radio" id = "angry" value = "angry" name ="rating">
+            </span>
+
+            <span class="rating_group">
+            <img src="/images/disappointed_icon.png" height = "50" alt ="this is a disappointed icon">
+            <input type="radio" id = "disappointed" value = "disappointed" name ="rating">
+            </span>
+
+            <span class="rating_group">
+            <img src="/images/sad_icon.png" height = "50" alt ="this is a sad icon">
+            <input type="radio" id = "sad" value = "sad" name ="rating">
+            </span>
+
+            <span class="rating_group">
+            <img src="/images/nuetral_icon.png" height = "50" alt ="this is a nuetral icon">
+            <input type="radio" id = "nuetral" value = "nuetral" name ="rating">
+            </span>
+
+            <span class="rating_group">
+            <img src="/images/surprised_icon.png" height = "50" alt ="this is a surprised icon">
+            <input type="radio" id = "surprised" value = "surprised" name ="rating">
+            </span>
+
+            <span class="rating_group">
+            <img src="/images/happy_icon.png" height = "50" alt ="this is a happy icon">
+            <input type="radio" id = "happy" value = "happy" name ="rating">
+            </span>
+
+            <span class="rating_group">
+            <img src="/images/joy_icon.png" height = "50" alt ="this is an overyjoed icon">
+            <input type="radio" id = "overjoyed" value = "overjoyed" name ="rating">
+            </span>
+            
+            
+        </fieldset>
+
+        <label for="reflection">Reflection:</label><br>
+        <textarea id = "reflection" rows = "4" cols = "26" name ="reflection"></textarea><br>
+
+        <label for="pictures">Pictures:</label><br>
+        <input type="file" id = "pictures" name = "pictures" accept="image/png, image/jpeg"><br>
+
+        <span>
+            <fieldset>
+                <label for="expenses">Expenses:</label><br>
+                <textarea id = "reflection" rows = "4" cols = "26" name ="expenses"></textarea><br>
+                
+                <label for="split">Split:</label><br>
+                <textarea id = "split" rows = "2" cols = "26" name ="split"></textarea><br>
+            </fieldset>
+        </span>
+
+        <input type="submit" value="Send">
+    </form>
+    </body>
+</html>
