@@ -307,18 +307,58 @@
     margin: 4px;
 }
 
+
 .ratings {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rating_group radio {
     margin-left: auto;
     margin-right: auto;
 }
 .rating_group img{
     height: 100px;
+    padding: 20px;
 }
 
-#pictures {
+.pic {
     height: 50px;
+    margin: 20px;
+    padding: 20px; 
 }
 
+.close_label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.close_input {
+    width: 100%;
+}
+
+.close_bottom {
+    padding: 20px;
+    width:100%;
+}
+
+.close_left {
+    width: 46%;
+}
+
+.close_right {
+    width: 48%;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+}
+
+.close_submit {
+    height: 40px;
+    width: 90px;
+    font-size: 14px;
+    margin: 20px;
+}
 
 
 

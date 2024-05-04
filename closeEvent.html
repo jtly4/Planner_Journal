@@ -28,8 +28,8 @@
     <form action="/close_event_form" method="POST" enctype="multipart/form-data">
         <!-- rating, reflection, add photos, expenses + split -->
         
-        <fieldset>
-            <label for="rating">How did it go?</label><br>
+        <fieldset class="ratings">
+            <label for="rating" class="close_label">How did it go?</label><br>
             <span class="rating_group">
                 <img src="/images/angry_icon.png" height = "50" alt ="this is an angry icon">
                 <input type="radio" id = "angry" value = "angry" name ="rating">
@@ -67,24 +67,29 @@
             
             
         </fieldset>
+        <div class="close_bottom">
+            <div class="close_left">
+                <label for="reflection" class="close_label">Reflection:</label><br>
+                <textarea id = "reflection" rows = "16" cols = "26" name ="reflection" class="close_input"></textarea><br>
 
-        <label for="reflection">Reflection:</label><br>
-        <textarea id = "reflection" rows = "4" cols = "26" name ="reflection"></textarea><br>
-
-        <label for="pictures">Pictures:</label><br>
-        <input type="file" id = "pictures" name = "pictures" accept="image/png, image/jpeg"><br>
-
-        <span>
-            <fieldset>
-                <label for="expenses">Expenses:</label><br>
-                <textarea id = "reflection" rows = "4" cols = "26" name ="expenses"></textarea><br>
-                
-                <label for="split">Split:</label><br>
-                <textarea id = "split" rows = "2" cols = "26" name ="split"></textarea><br>
-            </fieldset>
-        </span>
-
-        <input type="submit" value="Send">
+                <span class="pic">
+                <label for="pictures" class="close_label">Pictures:</label><br>
+                <input type="file" id = "pictures" name = "pictures" accept="image/png, image/jpeg"><br>
+                </span>
+            </div>
+            <div class="close_right">
+                <span>
+                    <fieldset>
+                        <label for="expenses" class="close_label">Expenses:</label><br>
+                        <textarea id = "reflection" rows = "12" cols = "26" name ="expenses" class="close_input"></textarea><br>
+                        
+                        <label for="split" class="close_label">Split:</label><br>
+                        <textarea id = "split" rows = "10" cols = "26" name ="split" class="close_input"></textarea><br>
+                    </fieldset>
+                </span>
+            </div>
+        </div>
+        <input type="submit" value="Send" class="close_submit">
     </form>
     </body>
 </html>
