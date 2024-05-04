@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Event</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class = "navbar">
+        <div class = "navbar_container">
+            <h1>Planner</h1>
+            <ul class="navbar_menu">
+                <li class="navbar_item">
+                    <a href="login.html" class="navbar_links">
+                        Log In
+                    </a>
+                </li>
+                <li class="navbar_item">
+                    <a href="signup.html" class="navbar_links">
+                        Sign Up
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h2>View Event</h2>
+        <!-- name of event , date, time, description, where, list, atendees, tranport -->
+        <div class="view_left">
+            <label for="eventName"><b>Event Name:</b></label><br>
+            <div class = "v_event" id ="v_name">
+                <p id="v_event_name">Group Meeting</p>
+            </div>
+
+            <label for="eventDate"><b>Date:</b></label><br>
+            <div class = "v_event" id ="v_date">
+                <p id="v_event_date">May 5, 2024</time>
+            </div>
+
+            <label for="startTime"><b>Time:</b></label><br>
+            <div class = "v_event" id ="v_time">
+                <p id="v_event_start">9:30 AM</p>
+                <p>to</p>
+                <p id ="v_event_end">11:00 AM</p>
+            </div>
+
+            <label for="eventDescription"><b>Description / Notes:</b></label><br>
+            <div class = "v_event" id ="v_desc">
+                <p id="v_event_desc">Working on project 2! Due Date: May 20, 2024</p>
+            </div>
+        </div>
+        <div class ="view_right">
+            <label for="Where"><b>Where:</b></label><br>
+            <div class = "v_event" id ="v_where">
+                <p id="v_event_where">Study room B</p>
+            </div>
+
+            <form action="/event_form" method="POST"></form>
+                <label for="eventToDo"><b>To Do Beforehand:</b></label><br>
+                <span>
+                    <fieldset>
+                        <input type="checkbox" id="tdOneCheck" name="tdOneCheck" value="done">
+                        <span class ="todo" id="toDoOne">
+                            <span class = "v_event" id ="v_tdOne">
+                                <p id="v_event_tdOne">Finish gathering resources</p>
+                            </span>
+                        </span><br>
+                        <input type="checkbox" id="tdTwoCheck" name="tdTwoCheck" value="done">
+                        <span class ="todo" id="toDoTwo">
+                            <span class = "v_event" id ="v_tdTwo">
+                                <p id="v_event_tdTwo">Write introduction</p>
+                            </span>
+                        </span><br>
+                        <input type="checkbox" id="tdThreeCheck" name="tdThreeCheck" value="done">
+                        <span class ="todo" id="toDoThree">
+                            <span class = "v_event" id ="v_tdThree">
+                                <p id="v_event_tdThree">Get snacks</p>
+                            </span>
+                        </span><br>
+                        <input type="submit" value="Save">
+                    </fieldset>
+                </span>
+            
+
+            <label for="eventAttendees"><b>Attendees:</b></label><br>
+            <div class = "v_event" id ="v_attendees">
+                <p id="v_event_attendees">Amy A, Bob B, Charlie C, Delaney D</p>
+            </div>
+
+            <label for="eventTransport"><b>Method of Transportation:</b></label><br>
+            <div class = "v_event" id ="v_transport">
+                <p id="v_event_transport">Walking</p>
+            </div>
+        </div>
+
+        
+    </form>
+    </body>
+</html>

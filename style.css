@@ -1,0 +1,351 @@
+
+.calendar{
+    background-color: #d8a6ff;
+    color:rgb(154, 45, 218);
+    border-radius: 5px;
+    max-width: 300px;
+    max-height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    overflow: hidden;
+    font-size: small;
+}
+
+.calendar_inner{
+    padding: 2rem;
+}
+
+.calendar_headings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 0;
+    color:white;
+    font-size: smaller;
+}
+
+.left_arrow, .right_arrow{
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.current_datetime{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c170ff;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    max-height: 30px;
+    color:white;
+    font-size: smaller;
+}
+
+.current_datetime .daytxt {
+    background-color:rgb(115, 46, 189);
+    color:rgb(219, 158, 254);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    align-self: center;
+}
+
+.days_date ul{
+    list-style: none;
+    align-items: center;
+    font-size: smaller;
+}
+
+.days_date .days, .dates{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    align-items: center;
+    font-size: smaller;
+}
+.dates {
+    margin-top: 1rem;
+    align-items: center;
+    font-size: small;
+}
+
+.days_date .days li{
+    border-bottom: 2px solid #c170ff;
+    margin: 0 0.2rem;
+    align-items: center;
+    font-size: small;
+}
+
+.dates li{
+    padding: 0.5rem;
+    margin: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-size: smaller;
+}
+
+.days_date .dates li:hover {
+    background-color: #b049ff;
+    color: rgb(115, 46, 189);
+}
+
+.days_date .dates li.active {
+    background: rgb(77, 0, 128);
+}
+
+.days_date .dummy {
+    color: rgb(115, 46, 189);
+}
+
+.cur_week {
+    position: absolute;
+    right: 0px;
+    top: 80px;
+    height: 100%;
+}
+.week{
+    background-color: #eafff6;
+    height : 690px;
+    width : 170px;
+    margin: 2px;
+    text-align: center;
+    float: left;
+}
+
+.date_top{
+    background-color: #cdfae6;
+    margin: 2px;
+}
+
+.upcoming{
+    background-color: #e2cdfa;
+    margin: 2px;
+    height : 370px;
+    width : 300px;
+}
+
+.qa {
+    background-color: #d2ddba;
+    padding: 5px;
+}
+
+.view_left {
+    width: 50%;
+}
+
+.view_right {
+    width: 50%;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    
+}
+
+.v_event {
+    background-color: #ebe4d1;
+    width: 99%;
+}
+
+#signUp_box {
+    width: 60%;
+    height: 60%;
+    background-color: #85dbad;
+    float: right;
+    margin: 10px;
+}
+
+.signUp_input {
+    font-size:medium;
+    width: 80%;
+    margin: 6%;
+    align-items: center;
+}
+
+.signUp_create {
+    font-size:medium;
+    margin: 6%;
+    width: 200px;
+}
+
+#signUp_journal {
+    height: 200px;
+    position: relative;
+    top: 90px;
+    left: 40px;
+}
+
+#login_box {
+    background-color: #85dbad;
+    float: center;
+    width: 60%;
+    height: 70%;
+}
+
+
+
+
+
+
+
+
+html,
+body 
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: #fff;
+}
+
+/* Navbar */
+.navbar {
+    background: #CCE3DE;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    padding: 0 50px;
+    max-width: 1300px;
+
+}
+
+.navbar_item {
+    height: 80px;
+}
+
+.navbar_links {
+    color: #49725C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1 rem;
+    height: 100%;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar_links:hover {
+    color: #63466B;
+}
+
+/* Home Text Page (just a placeholder name) */
+.features {
+    background: #FFF;
+}
+
+.features_container {
+    display: table-column;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: #ffffff;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.features h1 {
+    font-size: 4rem;
+    background-color: #FFF;
+    background-image: linear-gradient(to top, #D8A6FF 0%, #62466B 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.features h2 {
+    font-size: 4rem;
+    background-color: #FFF;
+    background-image: linear-gradient(to top, #62466B 0%, #D8A6FF 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.features p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #45364B;
+}
+
+
+/* Footer */
+.footer_container {
+    background-color: #CCE3DE;
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_links {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_link-wrapper {
+    display: flex;
+}
+
+.footer_link-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: left;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.footer_link-items h2 {
+    margin-bottom: 16px;
+}
+
+.footer_link-items a {
+    color: #49725C;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer_link-items a:hover {
+    color: #63466B;
+    transition: 0.3s ease-out;
+}

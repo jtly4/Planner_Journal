@@ -4,23 +4,42 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
-        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-        <h2>Login</h2>
-        <fieldset>
+        <!-- navbar -->
+        <nav class = "navbar">
+            <div class = "navbar_container">
+                <h1>Planner</h1>
+                <ul class="navbar_menu">
+                    <li class="navbar_item">
+                        <a href="login.html" class="navbar_links">
+                            Log In
+                        </a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="signup.html" class="navbar_links">
+                            Sign Up
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <fieldset id="login_box">
+            <h2>Login</h2>
             <form action="/login_attempt" method="POST">
-                <input type="email" id="email" name="email" placeholder ="Email Address" required><br>
+                <input type="email" id="email" name="email" placeholder ="Email Address" class ="login_input" required><br>
     
-                <input type="password" id="password" name="password" placeholder = "Password" minilength = "8" required><br>
+                <input type="password" id="password" name="password" placeholder = "Password" class ="login_input" minilength = "8" required><br>
                 
-                <a href ="" title ="Forgot Password?">Forgot Password?</a><br>
+                <a href ="" title ="Forgot Password?" class ="login_input">Forgot Password?</a><br>
 
-                <input type="submit" value="Log In">
+                <input type="submit" value="Create Account" class ="login_input">
 
-                <p>Don't have an account?</p><br>
-                <a href ="signup.html" title ="Sign up">Sign up</a><br>
-            
+                <span class="login_noAccount">
+                    <p class="login_noAcc">Don't have an account?</p><br>
+                    <a href ="" title ="Sign up" class="login_noAcc">Sign up</a><br>
+                </span>
             </form>
         </fieldset>
     </body>

@@ -3,26 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <title>Create Account</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <h2>Sign Up</h2>
-    <fieldset>
-        <form action="/signing_up" method="POST">
-            <input type="email" id="email" name="email" placeholder ="Email Address" required><br>
+    <!-- navbar -->
+    <nav class = "navbar">
+        <div class = "navbar_container">
+            <h1>Planner</h1>
+            <ul class="navbar_menu">
+                <li class="navbar_item">
+                    <a href="login.html" class="navbar_links">
+                        Log In
+                    </a>
+                </li>
+                <li class="navbar_item">
+                    <a href="signup.html" class="navbar_links">
+                        Sign Up
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h2 id="signUp_title">Create Account</h2>
+    <img src ="journal_icon.png" id="signUp_journal">
+    <fieldset id="signUp_box">
+        <form action="/account_creation" method="POST">
+            <input type="email" id="email" class ="signUp_input" name="email" placeholder ="Email Address" required><br>
 
-            <input type="password" id="password" name="password" placeholder = "Password" minilength = "8" required><br>
-            <input type="confirm_password" id="password" name="confirm_password" placeholder = "Confirm Password" minilength = "8" required><br>
+            <input type="password" id="password" class ="signUp_input" name="password" placeholder = "Password" minilength = "8" required><br>
+            
+            <input type="passwordConfirm" id="passwordConfirm" class ="signUp_input" name="passwordConfirm" placeholder = "Confrim Password" minilength = "8" required><br>
 
-            <p>Sync with Google Calendar?</p>
-            <button type="y_n">Yes/No</button>
+            <label for ="sync" class ="signUp_input">Sync with Google Calendar?</label>
+            <input type ="checkbox" id ="sync" ><br>
 
-            <input type="submit" value="Sign Up">
-
-            <p>Already have an account?</p><br>
-            <a href ="login.html" title ="Log Inp">Sign up</a><br>
-        
+            <input type="submit" value="Create Account" class ="signUp_create">
         </form>
     </fieldset>
 </body>
