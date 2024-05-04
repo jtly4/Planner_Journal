@@ -57,14 +57,21 @@ body
     color: #63466B;
 }
 
-/* Home Text Page (just a placeholder name) */
-.features {
-    background: #FFF;
+/* Features */
+
+.feature_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #CCE3DE;
+    height: 90vh;
+    position: relative;
+    z-index: 1;
 }
 
-.features_container {
-    display: table-column;
-    grid-template-columns: 1fr 1fr;
+.feature_container > div {
+    display: grid;
+    grid-template-columns: auto auto auto;
     align-items: center;
     justify-self: center;
     margin: 0 auto;
@@ -76,7 +83,7 @@ body
     padding: 0 50px;
 }
 
-.features h1 {
+.feature h1 {
     font-size: 4rem;
     background-color: #FFF;
     background-image: linear-gradient(to top, #D8A6FF 0%, #62466B 100%);
@@ -87,7 +94,7 @@ body
     -moz-text-fill-color: transparent;
 }
 
-.features h2 {
+.feature h2 {
     font-size: 4rem;
     background-color: #FFF;
     background-image: linear-gradient(to top, #62466B 0%, #D8A6FF 100%);
