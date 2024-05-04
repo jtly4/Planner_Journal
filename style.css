@@ -133,7 +133,6 @@
 }
 
 .qa {
-    background-color: #d2ddba;
     padding: 5px;
 }
 
@@ -185,8 +184,24 @@
 #login_box {
     background-color: #85dbad;
     float: center;
-    width: 60%;
+    width: 40%;
     height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+
+}
+
+.login_input {
+    font-size:medium;
+    width: 80%;
+    margin: 6%;
+    align-items: center;
+}
+
+.login_noAcc{
+    align-self: center;
+    margin: 4px;
 }
 
 
