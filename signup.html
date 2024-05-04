@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account</title>
     <link rel="stylesheet" href="style.css"/>
+    <script src="signup.js" defer></script>
 </head>
 <body>
     <!-- navbar -->
@@ -28,18 +29,21 @@
     <h2 id="signUp_title">Create Account</h2>
     <img src ="images/journal_icon.png" id="signUp_journal">
     <fieldset id="signUp_box">
-        <form action="/account_creation" method="POST">
+        <form id="signupForm">
             <input type="email" id="email" class ="signUp_input" name="email" placeholder ="Email Address" required><br>
 
             <input type="password" id="password" class ="signUp_input" name="password" placeholder = "Password" minilength = "8" required><br>
             
             <input type="passwordConfirm" id="passwordConfirm" class ="signUp_input" name="passwordConfirm" placeholder = "Confrim Password" minilength = "8" required><br>
 
-            <label for ="sync" class ="signUp_input">Sync with Google Calendar?</label>
+            <label for ="sync" class ="signUp_input">
+                Sync with Google Calendar?</label>
             <input type ="checkbox" id ="sync" ><br>
 
-            <input type="submit" value="Create Account" class ="signUp_create">
+            <Button type="submit" class ="signUp_create">Create Account </Button>
         </form>
     </fieldset>
+
+    <script src="signup.js"></script>
 </body>
 </html>

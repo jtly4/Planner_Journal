@@ -7,21 +7,26 @@
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <h2>Help / Contact</h2>
-    <form action="/help_form" method="POST">
-        <label for="email">Email Adress:</label><br>
-        <input type="email" id="email" name="email" placeholder ="Email" required><br>
+    <div class="help_contact">
+        <h2>Help / Contact</h2>
+        <form action="/help_form">
+            <label for="email">Email Adress:</label><br>
+            <input type="email" id="email" name="email" placeholder ="Email" required><br>
 
-        <label for="subject">Subject Line:</label><br>
-        <input type="text" id="subject" name="subject" placeholder = "Subject" maxlength = "20" required><br>
+            <label for="subject">Subject Line:</label><br>
+            <input type="text" id="subject" name="subject" placeholder = "Subject" maxlength = "20" required><br>
 
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50" placeholder = "Your concern here..." maxlength = "500" required></textarea><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" placeholder = "Your concern here..." maxlength = "500" required></textarea><br>
 
-        <input type="submit" value="Send">
+            <input type="submit" value="Send">
     </form>
-    <p> Have a question or concern? Check our <a href="/FAQs.html" class="navbar_links" title = "Goes to FAQ Page"> FAQs </a> </p>
+    </div>
+    
+    <p> Have a question or concern? Check our <a href="FAQs.html" class="navbar_links" title = "Goes to FAQ Page"> FAQs </a> </p>
     <p> Have a question that you do not see answered? Fill out this form with your concern and we will get nack to you as soon as we can!</p>
     <p> Response times may vary between 3 - 12 business days.</p>
+
+    <script src="help.js"></script>
 </body>
 </html>
