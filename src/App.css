@@ -36,3 +36,66 @@
     transform: rotate(360deg);
   }
 }
+
+
+.navbar {
+  background: #cbf1ba;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar_container {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  padding: 0 50px;
+  max-width: 100%;
+
+}
+
+.navbar_menu {
+  display: grid;
+  align-items: center;
+  list-style: none;
+  justify-content: space-between;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  grid-template-columns: auto auto auto;
+  padding: 0 50px;
+}
+
+.navbar_item {
+  height: 80px;
+  width: 100%;
+}
+
+
+.navbar_links {
+  color: #84978d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1 rem;
+  height: 100%;
+}
+
+.navbar_links:hover {
+  color: #3e92cc;
+  transition: all 0.3s ease;
+}
+
+.view_Left {
+  background: pink;
+  display: grid;
+}
