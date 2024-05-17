@@ -65,7 +65,8 @@ function MonthCalendar() {
 function CalendarEvent(props) {
     return (
         <div className="calendarEvent">
-            <h4 className="calendarEvent_title">{props.title}</h4>
+            <Link to="/ViewEvent">{props.title}</Link>
+            {/* <h4 className="calendarEvent_title">{props.title}</h4> */}
             {/* maybe add start and end time ? */}
         </div>
     )
