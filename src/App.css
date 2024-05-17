@@ -1,3 +1,12 @@
+:root{
+  --lavenderblush: #faf5ff;
+  --creame : #FEF5EA;
+  --olive: #ADC698 
+  --tea_green: #D0E3C4
+  --lilac: #CBA9D2
+  --deep_purple: #503047
+}
+
 .App {
   text-align: center;
 }
@@ -70,7 +79,7 @@
   z-index: 2;
   width: 100%;
   text-align: center;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   padding: 0 50px;
 }
 
@@ -95,7 +104,20 @@
   transition: all 0.3s ease;
 }
 
-.view_Left {
-  background: pink;
+.event_calendar {
+  background: var(--lavenderblush);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+
+.view_left {
+  background-color: pink;
   display: grid;
 }
