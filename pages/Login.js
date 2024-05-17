@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
+import SignUp from "./SignUp";
   
 function MyForm() {
     const [inputs, setInputs] = useState({});
@@ -60,7 +61,7 @@ const Login = () => {
             <MyForm/>
             <span>  
                 <p>Don't have an account?</p>
-                <Link to="/SignUp">Sign SignUp</Link>
+                <Link to="/SignUp">Sign Up</Link>
             </span>
         </>
     )
