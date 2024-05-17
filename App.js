@@ -59,6 +59,9 @@ function App() {
               <li className = "navbar_item">
                 <Link to="/Login">Login</Link>
               </li>
+              <li className = "navbar_item">
+                <Link to="/About">About Us</Link>
+              </li>
             </ul>
           </div>
         </nav>
