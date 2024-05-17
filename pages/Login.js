@@ -12,14 +12,11 @@ function MyForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // alert(inputs);
         alert("Submitted!")
     }
   
     return (
-        // <form onSubmit={handleSubmit}>
         <form onSubmit={handleSubmit} action="/help_form" method="POST">
-        {/* <label>Enter your name: */}
         <input 
             className='loginInput'
             type="email" 
@@ -39,22 +36,8 @@ function MyForm() {
             value={inputs.password || ""} 
             onChange={handleChange}
         /><br />
-        {/* </label> */}
             <input type="submit" />
         </form>
-        /*{ </label>
-            <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                placeholder ="Email Address" 
-                class ="login_input" 
-                required
-                value={email}
-                // onChange={(e) => setName(e.target.value)}
-            />
-            <input type="submit" />
-        </form> }*/
     )
   }
   
