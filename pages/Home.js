@@ -1,7 +1,3 @@
-// const Home = () => {
-//     return <h1>Home</h1>;
-//   };
-
 
 const FeatureCard = (props) => {
   return(
@@ -25,11 +21,6 @@ const Features = () => {
 // function Home() {
   const Home = () => {
   return(
-    // <>
-    //   <FeatureCard title="Create Events" imgTitle="/images/calendar_icon.png"/>
-    //   <FeatureCard title="Add Memories" imgTitle="/images/journal_icon.png"/>
-    //   <FeatureCard title="Add Expenses" imgTitle="/images/dollar_icon.png"/>
-    // </>
     <Features/>
   )
 }

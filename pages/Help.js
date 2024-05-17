@@ -55,19 +55,6 @@ function MyForm() {
         </label>
             <input type="submit" />
         </form>
-        /*{ </label>
-            <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                placeholder ="Email Address" 
-                class ="login_input" 
-                required
-                value={email}
-                // onChange={(e) => setName(e.target.value)}
-            />
-            <input type="submit" />
-        </form> }*/
     )
 }
 
