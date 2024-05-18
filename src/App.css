@@ -538,3 +538,41 @@
 .signup-sync {
   align-items: center;
 }
+
+
+.help_input{
+  width: 75%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid var(--deep_purple);
+  border-radius: 4px;
+  color: var(--deep_purple);
+  background-color: var(--lavenderblush);
+
+}
+
+
+
+.help_input:focus {
+  background-color: var(--tea_green);
+  color: var(--deep_purple);
+}
+
+#help_message {
+  width: 75%;
+  height: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid var(--deep_purple);
+  border-radius: 4px;
+  background-color: var(--lavenderblush);
+  color: var(--deep_purple);
+  resize: vertical;
+}
+
+#help_message:focus {
+  background-color: var(--tea_green);
+  color: var(--deep_purple);
+}
