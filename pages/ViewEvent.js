@@ -77,7 +77,7 @@ function EventDescription(props) {
     return (
         <>
             <label for="eventDescription" className = "event_label"><b>Event Description:</b></label><br />
-            <p>{props.description}</p> <br />
+            <textarea>{props.description}</textarea> <br />
         </>
     )
 }
@@ -137,6 +137,8 @@ function ViewEvent() {
                 <EventTransport transport="Driving" />
             </div>
             <button type="button" id="exit_view"><Link to="/Calendar">Exit</Link></button>
+            <button type="button" id="close_event"><Link to="/CloseEvent">Close Event</Link></button>
+            <button type="button" id="view_closed_event"><Link to="/ViewClosedEvent">View Closed Event</Link></button>
         </>
     )
 };
