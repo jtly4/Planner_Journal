@@ -17,7 +17,7 @@ function MyForm() {
     }
   
     return (
-        <form onSubmit={handleSubmit} action="/account_creation" method="POST">
+        <form onSubmit={handleSubmit} action="/account_creation" method="POST" className="sign-up-form">
             <input 
                 className='signUp_input'
                 type="email" 
@@ -47,28 +47,17 @@ function MyForm() {
                 value={inputs.passwordConfirm || ""} 
                 onChange={handleChange}
             /><br />
-            <label className ="signUp_label">Sync with Google Calendar?
-                <input 
-                    className ="signUp_input"
-                    type ="checkbox" 
-                    id ="sync" 
-                /><br />
-            </label>
-            <input type="submit" />
+            <div className="signup-sync">
+                <label className ="signUp_label">Sync with Google Calendar?
+                    <input 
+                        className ="signUp_input"
+                        type ="checkbox" 
+                        id ="sync" 
+                    />
+                </label>
+            </div>
+            <input type="submit" id="signup-btn" />
         </form>
-        /*{ </label>
-            <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                placeholder ="Email Address" 
-                class ="login_input" 
-                required
-                value={email}
-                // onChange={(e) => setName(e.target.value)}
-            />
-            <input type="submit" />
-        </form> }*/
     )
   }
 function SignUp() {
