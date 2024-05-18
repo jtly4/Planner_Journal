@@ -48,6 +48,7 @@
   }
 }
 
+/* Navbar */
 
 .navbar {
   background: #cbf1ba;
@@ -107,6 +108,8 @@
   transition: all 0.3s ease;
 }
 
+/* VIEW EVENT */
+
 .event_container {
   height: auto;
   width: 100%;
@@ -119,16 +122,28 @@
 }
 
 .view_left {
-  width: fill;
+  width: 100%;
 }
 
 .view_right {
   height: fill;
-  width: fill;
+  width: 100%;
 }
 
 .exit_view {
   align-items: right;
+}
+
+.event_label label, .event_label p {
+  height: auto;
+  
+  vertical-align: middle;
+}
+
+.event_label p {
+  width: fill;
+  background-color: var(--lilac);
+  display: inline;
 }
 
 .feature_container > div {
