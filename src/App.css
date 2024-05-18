@@ -442,3 +442,23 @@
   background: var(--lavenderblush);
 }
 
+/* FAQs */
+.qa {
+  padding: 5px;
+  margin-bottom: 2%;
+}
+
+.qas {
+  padding: 10px;
+}
+
+.qa_helpLink {
+  padding: 2%;
+  background-color: var(--tea_green);
+  align-items: center;
+}
+
+.qa_helpLink p, Link{
+  align-items: center;
+}
+
