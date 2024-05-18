@@ -493,8 +493,9 @@
 
 #login_noAccount{
   align-items: center;
-  margin: 4%;
+  margin: 2%;
   margin-left: 25%;
   padding: 0%;
   float: center;
+  font-size: large;
 }
