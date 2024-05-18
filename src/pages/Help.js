@@ -42,7 +42,7 @@ function MyForm() {
         /><br />
         </label>
         <label className='help_label'>Message:
-        <input 
+        <textarea 
             className='help_input'
             type="text" 
             name="message" 
