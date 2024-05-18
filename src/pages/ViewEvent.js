@@ -123,7 +123,9 @@ function EventTransport(props) {
 function ViewEvent() {
     return (
         <>
-            <h2>View Event</h2>
+        <h2>View Event</h2>
+        <div className='event_container'>
+            
             <div className='view_left'>
                 <EventName name="Book Club" />
                 <EventDate date="May 19, 2024" />
@@ -135,8 +137,10 @@ function ViewEvent() {
                 <EventToDo tdOne="Finish ch 8" tdTwo="Bake cookies" tdThree="" />
                 <EventAttendees attendees="Amy A, Bob B, Charlie C" />
                 <EventTransport transport="Driving" />
+                <button type="button" id="exit_view" classname='exit_view'><Link to="/Calendar">Exit</Link></button>
             </div>
-            <button type="button" id="exit_view"><Link to="/Calendar">Exit</Link></button>
+            
+        </div>
         </>
     )
 };
