@@ -462,3 +462,39 @@
   align-items: center;
 }
 
+
+/* LOGIN */
+.login-form {
+  background-color: var(--lilac);
+  align-items: center;
+  float: center;
+  width: 50%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding: 3%;
+}
+
+.login-input {
+  width: 80%;
+  font-size: medium;
+  margin: 6%;
+  padding: 2%;
+}
+
+#login-btn {
+  width: 30%;
+  align-items: center;
+  padding: 1%;
+  font-size: medium;
+  margin-left: 30%;
+}
+
+#login_noAccount{
+  align-items: center;
+  margin: 4%;
+  margin-left: 25%;
+  padding: 0%;
+  float: center;
+}
