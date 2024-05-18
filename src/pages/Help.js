@@ -44,6 +44,7 @@ function MyForm() {
         <label className='help_label'>Message:
         <textarea 
             className='help_input'
+            id = "help_message"
             type="text" 
             name="message" 
             placeholder = "Your concern here..."
