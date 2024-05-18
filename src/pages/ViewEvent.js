@@ -46,8 +46,10 @@ function MyForm(props) {
 function EventName(props) {
     return (
         <>
-            <label for="eventName" className = "event_label"><b>Event Name:</b></label><br />
-            <p>{props.name}</p> <br />
+        <div className="event_label">
+            <label for="eventName"><b>Event Name:</b></label><br />
+            <p>{props.name}</p>
+            </div>
         </>
     )
 }
@@ -55,8 +57,10 @@ function EventName(props) {
 function EventDate(props) {
     return (
         <>
-            <label for="eventDate" className = "event_label"><b>Event Date:</b></label><br />
-            <p>{props.date}</p> <br />
+        <div className="event_label">
+            <label for="eventDate"><b>Event Date:</b></label><br />
+            <p>{props.date}</p>
+            </div>
         </>
     )
 }
@@ -64,11 +68,13 @@ function EventDate(props) {
 function EventTime(props) {
     return (
         <>
-            <label for="eventTime" className = "event_label"><b>Event Time:</b></label><br />
-            <p>{props.name}</p> <br />
+        <div className="event_label">
+            <label for="eventTime"><b>Event Time:</b></label><br />
+            <p>{props.name}</p>
             <p>{props.start}</p>
-            <p>to</p>
+            <p> to </p>
             <p>{props.end}</p>
+            </div>
         </>
     )
 }
@@ -76,8 +82,10 @@ function EventTime(props) {
 function EventDescription(props) {
     return (
         <>
-            <label for="eventDescription" className = "event_label"><b>Event Description:</b></label><br />
+        <div className="event_label">
+            <label for="eventDescription"><b>Event Description:</b></label><br />
             <textarea>{props.description}</textarea> <br />
+            </div>
         </>
     )
 }
@@ -85,8 +93,10 @@ function EventDescription(props) {
 function EventLocation(props) {
     return (
         <>
-            <label for="eventLocation" className = "event_label"><b>Event Location:</b></label><br />
+        <div className="event_label">
+            <label for="eventLocation"><b>Event Location:</b></label><br />
             <p>{props.location}</p> <br />
+            </div>
         </>
     )
 }
@@ -94,8 +104,10 @@ function EventLocation(props) {
 function EventToDo(props) {
     return (
         <>
-            <label for="eventToDo" className = "event_label"><b>To Do Beforehand:</b></label><br />
+        <div className="event_label">
+            <label for="eventToDo"><b>To Do Beforehand:</b></label><br />
             <MyForm tdOne = {props.tdOne} tdTwo = {props.tdTwo} tdThree = {props.tdThree} />
+            </div>
         </>
     )
 }
@@ -103,8 +115,10 @@ function EventToDo(props) {
 function EventAttendees(props) {
     return (
         <>
-            <label for="eventAttendees" className = "event_label"><b>Event Attendees:</b></label><br />
+        <div className="event_label">
+            <label for="eventAttendees"><b>Event Attendees:</b></label><br />
             <p>{props.attendees}</p> <br />
+            </div>
         </>
     )
 }
@@ -112,8 +126,10 @@ function EventAttendees(props) {
 function EventTransport(props) {
     return (
         <>
-            <label for="eventTransport" className = "event_label"><b>Event Transport:</b></label><br />
+        <div className="event_label">
+            <label for="eventTransport"><b>Event Transport:</b></label><br />
             <p>{props.transport}</p> <br />
+            </div>
         </>
     )
 }
