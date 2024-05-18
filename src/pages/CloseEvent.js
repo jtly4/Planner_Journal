@@ -119,15 +119,17 @@ function MyForm() {
                     </span>
                     <span className='close_pics'>
                         <label className="close_label">Pictures:</label><br />
-                        <input type="file" id = "pictures" name = "pictures" className='close_input' accept="image/png, image/jpeg" /><br />
+                        <input type="file" id = "pictures" name = "pictures" className='close_input' accept="image/png, images/jpeg" mutiple /><br />
                     </span>
                 </div>
                 <div className='close_right'>
                     <span className='close_expenses'>
                         <div className='close_expense'>
+                            <label className='close_label'>Expenses:</label><br />
                             <textarea id = "expenses" name ="expenses" class="close_input"></textarea><br />
                         </div>
                         <div className='close_split'>
+                            <label className='close_label'>Split:</label><br />
                             <textarea id = "split" name ="split" class="close_input"></textarea><br />
                         </div>
                     </span>    
