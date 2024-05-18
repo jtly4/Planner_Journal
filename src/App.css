@@ -212,6 +212,57 @@
   width: 100%;
 }
 
+
+/* CREATE EVENT */
+.create-view-left {
+  width: 100%;
+}
+
+.create-view-right {
+  width: 100%;
+}
+
+.create-event{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cEvent_inputTxt {
+  width: 95%;
+  padding: 1%;
+  font-size: medium;
+}
+
+.event_label {
+  padding: 1%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.create-todo {
+  width: 95%;
+  padding: 1%;
+  margin-bottom: 20px;
+}
+
+.create-todos {
+  padding: 1%;
+}
+
+.create-time {
+  width: 20%;
+  font-size: large;
+}
+
+.cEvent_input {
+  font-size: large;
+}
+
+#createEvent_submitBtn {
+  font-size: medium;
+  padding: 8px;
+  margin-top: 10px;
+}
 .close-bottom {
   display: flex;
   justify-content: space-between;
