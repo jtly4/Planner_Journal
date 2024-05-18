@@ -16,9 +16,9 @@ function MyForm() {
     }
   
     return (
-        <form onSubmit={handleSubmit} action="/help_form" method="POST">
+        <form onSubmit={handleSubmit} action="/login_form" method="POST" className='login-form'>
         <input 
-            className='loginInput'
+            className='login-input'
             type="email" 
             name="email" 
             placeholder = "Email"
@@ -27,7 +27,7 @@ function MyForm() {
             onChange={handleChange}
         /><br/>
         <input 
-            className='loginInput'
+            className='login-input'
             type="password" 
             name="password" 
             placeholder = "Password"
@@ -36,7 +36,11 @@ function MyForm() {
             value={inputs.password || ""} 
             onChange={handleChange}
         /><br />
-            <input type="submit" />
+            <input type="submit" id="login-btn" />
+            <div id='login_noAccount'>  
+                <p>Don't have an account?</p>
+                <Link to="/SignUp">Sign Up</Link>
+            </div>
         </form>
     )
   }
@@ -47,12 +51,12 @@ const Login = () => {
         <>
             <h2>Login</h2>
             <MyForm/>
-            <span id='login_noAccount'>  
+            {/* <span id='login_noAccount'>  
                 <p>Don't have an account?</p>
                 <Link to="/SignUp">Sign Up</Link>
-            </span>
+            </span> */}
         </>
     )
   }
-  
+
   export default Login;
