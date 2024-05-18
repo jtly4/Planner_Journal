@@ -196,3 +196,23 @@
   justify-content: space-between;
   /* max-width: 1400px; */
 }
+
+
+/* CLOSE EVENT */
+.ratings {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close-left {
+  width: 100%;
+}
+
+.close-right {
+  width: 100%;
+}
+
+.close-bottom {
+  display: flex;
+  justify-content: space-between;
+}
