@@ -1,6 +1,5 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch, Link, Routes } from 'react-router-dom';
-import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
@@ -11,36 +10,11 @@ import Calendar from "./pages/Calendar";
 import CreateEvent from "./pages/CreateEvent";
 import ViewEvent from "./pages/ViewEvent";
 import CloseEvent from "./pages/CloseEvent";
+import ViewClosedEvent from './pages/ViewClosedEvent';
 
 
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-    // <Router>
-    //   <div className='App'>
-    //     <Navbar />
-    //     <div className='content'>
-    //       <Switch>
-
-    //       </Switch>
-    //     </div>
-    //   </div>
-    // </Router>
     <>
       <nav>
         <nav className = "navbar">
@@ -76,7 +50,8 @@ function App() {
           <Route path="/Calendar" element={<Calendar />}/>
           <Route path="/CreateEvent" element={<CreateEvent />}/>
           <Route path="/ViewEvent" element={<ViewEvent />}/>
-          <Route path="/About" element={<CloseEvent />}/>
+          <Route path="/CloseEvent" element={<CloseEvent />}/>
+          <Route path="/ViewClosedEvent" element={<ViewClosedEvent />}/>
         </Routes>
       </>
   );
