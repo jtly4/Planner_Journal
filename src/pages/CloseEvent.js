@@ -16,9 +16,9 @@ function MyForm() {
     }
   
     return (
-        <form onSubmit={handleSubmit} action="/close_event_form" method="POST">
+        <form onSubmit={handleSubmit} action="/close_event_form" method="POST" className="close-event-form">
+            <label for="ratings" class="close_label">How did it go?</label><br />
             <fieldset className="ratings">
-                <label for="ratings" class="close_label">How did it go?</label><br />
                 <div className='rating_group'>
                     <span className="angry_group">
                         <img src="/images/angry_icon.png" height = "50" alt ="this is an angry icon" className="closing_img" />
@@ -111,26 +111,26 @@ function MyForm() {
                     </span>
                 </div>
             </fieldset>
-            <div className='close_bottom'>
-                <div className='close_left'>
+            <div className='close-bottom'>
+                <div className='close-left'>
                     <span className="close_reflection">
                         <label className='close_label'>Reflection:</label><br />
-                        <textarea id="reflection" name="reflection" className='close_input' onChange={handleChange}/><br />
+                        <textarea id="reflection" name="reflection" className='close-text-input' rows="20" cols="90" onChange={handleChange}/><br />
                     </span>
                     <span className='close_pics'>
                         <label className="close_label">Pictures:</label><br />
                         <input type="file" id = "pictures" name = "pictures" className='close_input' accept="image/png, images/jpeg" mutiple /><br />
                     </span>
                 </div>
-                <div className='close_right'>
+                <div className='close-right'>
                     <span className='close_expenses'>
                         <div className='close_expense'>
                             <label className='close_label'>Expenses:</label><br />
-                            <textarea id = "expenses" name ="expenses" class="close_input"></textarea><br />
+                            <textarea id = "expenses" name ="expenses" class="close-text-input" rows="12" cols="90"></textarea><br />
                         </div>
                         <div className='close_split'>
                             <label className='close_label'>Split:</label><br />
-                            <textarea id = "split" name ="split" class="close_input"></textarea><br />
+                            <textarea id = "split" name ="split" class="close-text-input" rows="10" cols="90"></textarea><br />
                         </div>
                     </span>    
                 </div>
