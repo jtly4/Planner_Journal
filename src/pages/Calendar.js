@@ -4,7 +4,7 @@ function MonthCalendar() {
     return (
         <div className="calendar_inner">
             <div className="calendar_controls">
-                <div className="calenda_headings">
+                <div className="calendar_headings">
                     <i className="left_arrow" id="prev">&larr;</i>
                     <h2 className ="month_year">May 2024</h2>
                     <i className ="right_arrow" id ="next">&rarr;</i>
@@ -100,26 +100,28 @@ function Day(props) {
 function Week(props) {
     return (
         <>
-        <div className="Sunday">
+        <div className="curWeek">
+        <div className="dayOfWeek">
             <Day day = "Sunday" date="19" title="Book Club" />
         </div>
-        <div className="Monday">
-        <Day day = "Monday" date="20" />
+        <div className="dayOfWeek">
+            <Day day = "Monday" date="20" />
         </div>
-        <div className="Tuesday">
+        <div className="dayOfWeek">
             <Day day = "Tuesday" date="21" />
         </div>
-        <div className="Wednesday">
+        <div className="dayOfWeek">
             <Day day = "Wednesday" date="22" />
         </div>
-        <div className="Thursday">
+        <div className="dayOfWeek">
             <Day day = "Thursday" date="23" title="Dentist Appt" />
         </div>
-        <div className="Friday">
+        <div className="dayOfWeek">
             <Day day = "Friday" date="24" />
         </div>
-        <div className="Saturday">
+        <div className="dayOfWeek">
             <Day day = "Saturday" date="25" />
+        </div>
         </div>
         </>
     )
@@ -134,9 +136,11 @@ function UpcomingItem(props) {
 function Upcoming(props) {
     return (
         <>
+        <div className="upcoming_events">
             <h3 id="upcoming_txt">Upcoming:</h3>
             <UpcomingItem item="Charlie's bday party" />
             <UpcomingItem item="Lunch with Mom" />
+            </div>
         </>
     )
 }
