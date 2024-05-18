@@ -1,11 +1,11 @@
 :root{
   --lavenderblush: #faf5ff;
   --creame : #FEF5EA;
-  --olive: #ADC698 ;
-  --tea_green: #D0E3C4;
-  --lilac: #CBA9D2;
-  --deep_purple: #503047;
-  background-color: var(--creame);
+  --olive: #ADC698 
+  --tea_green: #D0E3C4
+  --lilac: #CBA9D2
+  --deep_purple: #503047
+  background: var(--creame);
   color: var(--deep_purple);
 }
 
@@ -131,24 +131,19 @@
   align-items: right;
 }
 
-/*.feature_container {
+.feature_container > div {
   height: auto;
   width: 100%;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: auto auto auto;
   justify-content: space-evenly;
   align-items: center;
   font-size: 1.2rem;
   top: 0;
+  padding: 10px;
 }
 
 .feature_card {
-  width: fill;
-}*/
-
-
-
-.view_left {
-  background-color: pink;
-  display: grid;
+  width: 100%;
 }
+
