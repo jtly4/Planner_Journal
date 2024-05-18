@@ -1,10 +1,10 @@
 :root{
   --lavenderblush: #faf5ff;
   --creame : #FEF5EA;
-  --olive: #ADC698 
-  --tea_green: #D0E3C4
-  --lilac: #CBA9D2
-  --deep_purple: #503047
+  --olive: #ADC698; 
+  --tea_green: #D0E3C4;
+  --lilac: #CBA9D2;
+  --deep_purple: #503047;
   background: var(--creame);
   color: var(--deep_purple);
 }
