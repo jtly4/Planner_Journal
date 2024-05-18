@@ -231,6 +231,7 @@
   width: 95%;
   padding: 1%;
   font-size: medium;
+  border-radius: 12px;
 }
 
 .event_label {
@@ -243,6 +244,7 @@
   width: 95%;
   padding: 1%;
   margin-bottom: 20px;
+  border-radius: 12px;
 }
 
 .create-todos {
@@ -252,18 +254,17 @@
 .create-time {
   width: 20%;
   font-size: large;
+  border-radius: 8px;
 }
 
 .cEvent_input {
   font-size: large;
+  border-radius: 8px;
 }
 
 #createEvent_submitBtn {
   font-size: medium;
   padding: 8px;
   margin-top: 10px;
-}
-.close-bottom {
-  display: flex;
-  justify-content: space-between;
+  border-radius: 8px;
 }
