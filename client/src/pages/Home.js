@@ -36,29 +36,29 @@ const HomeButtons = () => {
 
 
   const Home = () => {
-    const [users, setUsers] = useState([{
-      email:'',
-      password:''
-    }])
+    // const [users, setUsers] = useState([{
+    //   email:'',
+    //   password:''
+    // }])
 
-    useEffect(() => {
-      const fetchUsers = async () => {
-        const response = await fetch('http://localhost:5000/api/users')
-        const json = await response.json()
-        if(response.ok) {
-          setUsers(json)
-        }
-      }
-      fetchUsers()
-    }, [])
+    // useEffect(() => {
+    //   const fetchUsers = async () => {
+    //     const response = await fetch('http://localhost:5000/api/users')
+    //     const json = await response.json()
+    //     if(response.ok) {
+    //       setUsers(json)
+    //     }
+    //   }
+    //   fetchUsers()
+    // }, [])
 
   return(
     <>
-      <div className="users">
+      {/* <div className="users">
         {users && users.map((user) =>
           <p key = {user.password}>{user.email}</p>
         )}
-      </div>
+      </div> */}
       <Features/>
       <HomeButtons />
     </>

@@ -11,9 +11,17 @@ import CreateEvent from "./pages/CreateEvent";
 import ViewEvent from "./pages/ViewEvent";
 import CloseEvent from "./pages/CloseEvent";
 import ViewClosedEvent from './pages/ViewClosedEvent';
-
+import { useLogout } from './hooks/useLogout'
+import { useAuthContext } from './hooks/useAuthContext'
 
 function App() {
+  const { logout } = useLogout()
+  const { user } = useAuthContext()
+
+  const handleLogout = () => {
+    logout() 
+  }
+
   return (
     <>
       <nav>
@@ -28,14 +36,25 @@ function App() {
                 <Link to="/FAQ">FAQs</Link>
               </li>
               <li className = "navbar_item">
-                <Link to="/Calendar">Calendar</Link>
-              </li>
-              <li className = "navbar_item">
-                <Link to="/Login">Login</Link>
-              </li>
-              <li className = "navbar_item">
                 <Link to="/About">About Us</Link>
               </li>
+              {!user && (
+                <>
+                  <li className = "navbar_item">
+                    <Link to="/Login">Login</Link>
+                  </li>
+                </>
+              )}
+              {user && (
+                <>
+                  <li className = "navbar_item">
+                    <Link to="/Calendar">Calendar</Link>
+                  </li>
+                  <li className = "navbar_item">
+                    <button onClick={handleLogout} id="logout-btn">Log Out</button>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </nav>

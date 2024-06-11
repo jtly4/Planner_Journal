@@ -76,19 +76,6 @@ h4 {
   left: 0;
   z-index: 999;
   width: 100%;
-
-  /* width: 100%;
-    background-color: var(--dark-purple); 
-    color: white; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    border-bottom: 2px solid var(--light-purple); */
 }
 
 .navbar_container {
@@ -112,8 +99,19 @@ h4 {
   z-index: 2;
   width: 100%;
   text-align: center;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto;
   padding: 0 50px;
+}
+
+#logout-btn {
+  background: var(--tea_green);
+  border-radius: 15px;
+  border: 2px, solid var(--deep_purple);
+  color: var(--deep_purple);
+  font-size: medium;
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-family: 'Poppins';
 }
 
 .navbar_item {

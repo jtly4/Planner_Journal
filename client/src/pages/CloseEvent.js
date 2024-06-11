@@ -2,21 +2,48 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
   
 function MyForm() {
-    const [inputs, setInputs] = useState({});
+    const [isClosed, setIsClosed] = useState(false)
+    const [rating, setRating] = useState('')
+    const [image, setImage] = useState('')
+    const [reflection, setReflection] = useState('')
+    const [expenses, setExpenses] = useState('')
+    const [split, setSplit] = useState('')
+    const [error, setError] = useState(null)
 
-    const handleChange = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
-        setInputs(values => ({...values, [name]: value}))
-    }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        alert("Submitted!")
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+
+        console.log(
+            isClosed, rating, image, reflection, expenses, split
+        )
+        const newEvent = {
+            isClosed, rating, image, reflection, expenses, split
+        }
+        const response = await fetch('http://localhost:5000/api/events', {
+            method: 'PATCH', ////////////////////////////// ???????????????????? update event to include closed event items
+            body: JSON.stringify(newEvent),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        const json = await response.json()
+        if(!response.ok) {
+            setError(json.error)
+        }
+        if(response.ook) {
+            setIsClosed(false)
+            setRating('')
+            setImage('')
+            setReflection('')
+            setExpenses('')
+            setSplit('')
+        }
     }
   
     return (
-        <form onSubmit={handleSubmit} action="/close_event_form" method="POST" className="close-event-form">
+        // <form onSubmit={handleSubmit} action="/close_event_form" method="POST" className="close-event-form">
+        <form>
             <label for="ratings" class="close_label">How did it go?</label><br />
             <fieldset className="ratings">
                 <div className='rating_group'>
@@ -28,7 +55,7 @@ function MyForm() {
                             name="rating" 
                             value = "angry"
                             id = "angry"
-                            onChange={handleChange}
+                            onChange = {(e) => setRating(e.target.value)}
                         />
                     </span>
                 </div>
@@ -41,7 +68,7 @@ function MyForm() {
                             name="rating" 
                             value = "disappointed"
                             id = "disappointed"
-                            onChange={handleChange}
+                            onChange = {(e) => setRating(e.target.value)}
                         />
                     </span>
                 </div>
@@ -54,7 +81,7 @@ function MyForm() {
                             name="rating" 
                             value = "sad"
                             id = "sad"
-                            onChange={handleChange}
+                            onChange = {(e) => setRating(e.target.value)}
                         />
                     </span>
                 </div>
@@ -67,7 +94,7 @@ function MyForm() {
                             name="rating" 
                             value = "nuetral"
                             id = "nuetral"
-                            onChange={handleChange}
+                            onChange = {(e) => setRating(e.target.value)}
                         />
                     </span>
                 </div>
@@ -80,7 +107,7 @@ function MyForm() {
                             name="rating" 
                             value = "surprised"
                             id = "surprised"
-                            onChange={handleChange}
+                            onChange = {(e) => setRating(e.target.value)}
                         />
                     </span>
                 </div>
@@ -93,7 +120,7 @@ function MyForm() {
                             name="rating" 
                             value = "happy"
                             id = "happy"
-                            onChange={handleChange}
+                            onChange = {(e) => setRating(e.target.value)}
                         />
                     </span>
                 </div>
@@ -106,7 +133,7 @@ function MyForm() {
                             name="rating" 
                             value = "joy"
                             id = "joy"
-                            onChange={handleChange}
+                            onChange = {(e) => setRating(e.target.value)}
                         />
                     </span>
                 </div>
@@ -115,30 +142,66 @@ function MyForm() {
                 <div className='close-left'>
                     <span className="close_reflection">
                         <label className='close_label'>Reflection:</label><br />
-                        <textarea id="reflection" name="reflection" className='close-text-input' rows="20" cols="90" onChange={handleChange}/><br />
+                        <textarea 
+                            id="reflection" 
+                            name="reflection" 
+                            className='close-text-input' 
+                            rows="20" 
+                            cols="90" 
+                            onChange = {(e) => setReflection(e.target.value)}
+                            value={reflection} 
+                        /><br />
                     </span>
                     <span className='close_pics'>
                         <label className="close_label">Pictures:</label><br />
-                        <input type="file" id = "pictures" name = "pictures" className='close_input' accept="image/png, images/jpeg" mutiple /><br />
+                        <input 
+                            type="file" 
+                            id = "pictures" 
+                            name = "pictures" 
+                            className='close_input' 
+                            accept="image/png, images/jpeg" 
+                            // mutiple 
+                            onChange = {(e) => setImage(e.target.value)}
+                            value={image} 
+                        /><br />
                     </span>
                 </div>
                 <div className='close-right'>
                     <span className='close_expenses'>
                         <div className='close_expense'>
                             <label className='close_label'>Expenses:</label><br />
-                            <textarea id = "expenses" name ="expenses" class="close-text-input" rows="12" cols="90"></textarea><br />
+                            <textarea 
+                                id = "expenses" 
+                                name ="expenses" 
+                                class="close-text-input" 
+                                rows="12" 
+                                cols="90"
+                                onChange = {(e) => setExpenses(e.target.value)}
+                                value={expenses} 
+                            ></textarea><br />
                         </div>
                         <div className='close_split'>
                             <label className='close_label'>Split:</label><br />
-                            <textarea id = "split" name ="split" class="close-text-input" rows="10" cols="90"></textarea><br />
+                            <textarea 
+                                id = "split" 
+                                name ="split" 
+                                class="close-text-input" 
+                                rows="10" 
+                                cols="90"
+                                onChange = {(e) => setSplit(e.target.value)}
+                                value={split} 
+                            ></textarea><br />
                         </div>
                     </span>    
                 </div>
             </div>
-            <input type="submit" id="close-button"/>
+            {/* <input type="submit" id="close-button"/> */}
+            <input type="submit" id="close-button" onClick={handleSubmit}/>
+            {error && <div className='error'>{error}</div>}
         </form>
     )
-  }
+}
+
   
   
 function CloseEvent() {

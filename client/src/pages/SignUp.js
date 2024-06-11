@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import axios from "axios"
+// import axios from "axios"
+import { useSignup } from "../hooks/useSignup"
 
   
 function MyForm() {
@@ -7,34 +8,36 @@ function MyForm() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [passwordConfirm, setPasswordConfirm] = useState('')
-    const [error, setErrror] = useState(null)
+    // const [error, setErrror] = useState(null)
+    const {signup, error, isLoading} = useSignup()
 
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        await signup(email, password)
 
-        console.log(email, password, passwordConfirm)
-        const newUser = {
-            email, password, passwordConfirm
-        }
-        const response = await fetch('http://localhost:5000/api/users', {
-            method: 'POST',
-            body: JSON.stringify(newUser),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        const json = await response.json()
-        if(!response.ok) {
-            setErrror(json.error)
-        }
-        if(response.ook) {
-            setEmail('')
-            setPassword('')
-            setPasswordConfirm('')
-            setErrror(null)
-            console.log('New user added', json)
-        }
+        // console.log(email, password, passwordConfirm)
+        // const newUser = {
+        //     email, password, passwordConfirm
+        // }
+        // const response = await fetch('http://localhost:5000/api/users', {
+        //     method: 'POST',
+        //     body: JSON.stringify(newUser),
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     }
+        // })
+        // const json = await response.json()
+        // if(!response.ok) {
+        //     setErrror(json.error)
+        // }
+        // if(response.ook) {
+        //     setEmail('')
+        //     setPassword('')
+        //     setPasswordConfirm('')
+        //     setErrror(null)
+        //     console.log('New user added', json)
+        // }
         // axios.post("/api/users", newUser)
         // axios.post("http://localhost:5000/users", newUser)
     }
@@ -50,7 +53,6 @@ function MyForm() {
                 placeholder = "Email"
                 required
                 value={email} 
-                // onChange={handleChange}
                 onChange = {(e) => setEmail(e.target.value)}
             /><br/>
             <input 
@@ -61,7 +63,6 @@ function MyForm() {
                 minLength={8}
                 required
                 value={password} 
-                // onChange={handleChange}
                 onChange = {(e) => setPassword(e.target.value)}
             /><br />
             <input 
@@ -84,21 +85,21 @@ function MyForm() {
   
 //   const SignUp = () => {
 function SignUp() {
-    const [users, setUsers] = useState([{
-      email:'',
-      password:''
-    }])
+    // const [users, setUsers] = useState([{
+    //   email:'',
+    //   password:''
+    // }])
 
-    useEffect(() => {
-      const fetchUsers = async () => {
-        const response = await fetch('http://localhost:5000/api/users')
-        const json = await response.json()
-        if(response.ok) {
-          setUsers(json)
-        }
-      }
-      fetchUsers()
-    }, [])
+    // useEffect(() => {
+    //   const fetchUsers = async () => {
+    //     const response = await fetch('http://localhost:5000/api/users')
+    //     const json = await response.json()
+    //     if(response.ok) {
+    //       setUsers(json)
+    //     }
+    //   }
+    //   fetchUsers()
+    // }, [])
 
   return(
     <>
