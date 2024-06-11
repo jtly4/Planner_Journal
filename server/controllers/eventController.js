@@ -8,6 +8,11 @@ const getEvents = async (req, res) => {
     res.status(200).json(events)
 }
 
+const getDay = async (req, res) => {
+    const d = req.query
+    const events = await EventModel.find({date: d})
+    res.status(200).json(events)
+}
 // get a single event
 const getEvent = async (req, res) => {
     const { id } = req.params
@@ -75,5 +80,6 @@ module.exports = {
     getEvent,
     createEvent,
     deleteEvent,
-    updateEvent
+    updateEvent,
+    getDay
 }

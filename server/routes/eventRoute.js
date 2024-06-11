@@ -5,7 +5,8 @@ const {
     getEvent,
     createEvent,
     deleteEvent,
-    updateEvent
+    updateEvent,
+    getDay
 } = require('../controllers/eventController')
 
 // const requireAuth = require('../middleware/requireAuth')
@@ -17,6 +18,8 @@ router.get('/', getEvents);
 
 // GET a single events
 router.get('/:id', getEvent);
+
+router.get('/date', getDay)
 
 // POST a new event
 router.post('/', createEvent);
