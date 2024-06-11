@@ -3,8 +3,8 @@ const mongoose = require("mongoose")
 
 // get all events
 const getEvents = async (req, res) => {
-    const user_id = req.user._id
-    const events = await EventModel.find({ user_id }) // .sort({createdAt: -1}) sorts newest first
+    // const user_id = req.user._id
+    const events = await EventModel.find() // .sort({createdAt: -1}) sorts newest first
     res.status(200).json(events)
 }
 
@@ -29,9 +29,9 @@ const createEvent = async (req, res) => {
     } = req.body
     // add document to db
     try {
-        const user_id = req.user._id
+        // const user_id = req.user._id
         const event = await EventModel.create({
-            user_id, title, date, startTime, endTime, description, location, who, toDoOne, toDoTwo, toDoThree, transportation, 
+            title, date, startTime, endTime, description, location, who, toDoOne, toDoTwo, toDoThree, transportation, 
             isClosed, rating, image, reflection, expenses, split
         })
         await event.save()

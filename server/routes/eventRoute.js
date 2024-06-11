@@ -8,9 +8,9 @@ const {
     updateEvent
 } = require('../controllers/eventController')
 
-const requireAuth = require('../middleware/requireAuth')
+// const requireAuth = require('../middleware/requireAuth')
 // require authentication 
-router.use(requireAuth)
+// router.use(requireAuth)
 
  // GET all events
 router.get('/', getEvents);
