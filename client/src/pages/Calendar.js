@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { useEventsContext } from "../hooks/useEventsContext"
+import { useState, useEffect } from 'react';
 
 function MonthCalendar() {
     return (
@@ -65,7 +67,7 @@ function MonthCalendar() {
 function CalendarEvent(props) {
     return (
         <div className="calendarEvent">
-            <Link to="/ViewEvent">{props.title}</Link>
+            <Link to="/ViewEvent/${props.dateID}">{props.title}</Link>
             {/* <h4 className="calendarEvent_title">{props.title}</h4> */}
             {/* maybe add start and end time ? */}
         </div>
@@ -98,29 +100,115 @@ function Day(props) {
 }
 
 function Week(props) {
+    const {events, dispatch} = useEventsContext()
+    const [dateEvents, setEvents] = useState([]);
+    const [sun, setSun] = useState([])
+    const [mon, setMon] = useState([])
+    const [tue, setTue] = useState([])
+    const [wed, setWed] = useState([])
+    const [thu, setThu] = useState([])
+    const [fri, setFri] = useState([])
+    const [sat, setSat] = useState([])
+
+//   const {user} = useAuthContext()
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      const response = await fetch('/api/events/date?date=2024-06-09')
+      const json = await response.json()
+      if (response.ok) {
+        setSun(JSON.stringify(json))
+      }
+    //   response = await fetch('/api/events/date?date=2024-06-10')
+    //   json = await response.json()
+    //   if (response.ok) {
+    //     setMon(JSON.stringify(json))
+    //   }
+      response = await fetch('/api/events/6667ec75693d07202f700561')
+      json = await response.json()
+      if (response.ok) {
+        setMon(json)
+      }
+      response = await fetch('/api/events/date?date=2024-06-11')
+      json = await response.json()
+      if (response.ok) {
+        setTue(JSON.stringify(json))
+      }
+      response = await fetch('/api/events/date?date=2024-06-12')
+      json = await response.json()
+      if (response.ok) {
+        setWed(JSON.stringify(json))
+      }
+      response = await fetch('/api/events/date?date=2024-06-13')
+      json = await response.json()
+      if (response.ok) {
+        setThu(JSON.stringify(json))
+      }
+      response = await fetch('/api/events/date?date=2024-06-14')
+      json = await response.json()
+      if (response.ok) {
+        setFri(JSON.stringify(json))
+      }
+      response = await fetch('/api/events/date?date=2024-06-15')
+      json = await response.json()
+      if (response.ok) {
+        setSat(JSON.stringify(json))
+      }
+    }
+    fetchEvents()
+  })
+
+  // Fetch events for each day and store them in a dictionary
+//   Promise.all(weekDays.map(fetchEventsForDay)).then((results) => {
+//     const eventsByDayObject = {};
+//     results.forEach((result) => {
+//         const [date, events] = Object.entries(result)[0];
+//         eventsByDayObject[date] = events;
+//     });
+//     setEventsByDay(eventsByDayObject);
+//     });
+    // fetchAll(() => {
+    //     const fetchEvents = async (date) => {
+    //     const response = await fetch('/api/events/date?date=${date}')
+    //     const json = await response.json()
+    //     if (response.ok) {
+    //         dispatch({type: 'SET_EVENTS', payload: json})
+    //         setEvents(json)
+    //         return(json)
+    //     }
+    // }})
+  
     return (
         <>
         <div className="curWeek">
         <div className="dayOfWeek">
-            <Day day = "Sunday" date="9" title="Book Club" />
+        {/* {fetchEvents('2024-06-09')} */}
+            <Day day = "Sunday" date="9" title={sun.title} dateID={sun._id}/>
         </div>
         <div className="dayOfWeek">
-            <Day day = "Monday" date="10" />
+        {/* {fetchEvents('2024-06-19')} */}
+            <Day day = "Monday" date="10" title={mon.title} dateID={mon._id}/>
+            {console.log(mon.title, mon._id)}
         </div>
         <div className="dayOfWeek">
-            <Day day = "Tuesday" date="11" />
+        {/* {fetchEvents('2024-06-11')} */}
+            <Day day = "Tuesday" date="11" title={tue.title} dateID={tue._id}/>
         </div>
         <div className="dayOfWeek">
-            <Day day = "Wednesday" date="12" />
+        {/* {fetchEvents('2024-06-12')} */}
+            <Day day = "Wednesday" date="12" title={wed.title} dateID={wed._id}/>
         </div>
         <div className="dayOfWeek">
-            <Day day = "Thursday" date="13" title="Dentist Appt" />
+        {/* {fetchEvents('2024-06-13')} */}
+            <Day day = "Thursday" date="13" title={thu.title} dateID={thu._id}/>
         </div>
         <div className="dayOfWeek">
-            <Day day = "Friday" date="14" />
+        {/* {fetchEvents('2024-06-14')} */}
+            <Day day = "Friday" date="14" title={fri.title} dateID={fri._id}/>
         </div>
         <div className="dayOfWeek">
-            <Day day = "Saturday" date="15" />
+        {/* {fetchEvents('2024-06-15')} */}
+            <Day day = "Saturday" date="15" title={sat.title} dateID={sat._id}/>
         </div>
         </div>
         </>
