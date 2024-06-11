@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Switch, Link, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link, Routes, Navigate } from 'react-router-dom';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
@@ -63,10 +63,13 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />}/>
           <Route path="/FAQ" element={<FAQ />}/>
-          <Route path="/SignUp" element={<SignUp />}/>
-          <Route path="/Login" element={<Login />}/>
+          {/* <Route path="/SignUp" element={<SignUp />}/> */}
+          <Route path="/SignUp" element={!user ? <SignUp /> : <Navigate to="/" />} />
+          {/* <Route path="/Login" element={<Login />}/> */}
+          <Route path="/Login" element={!user ? <Login /> : <Navigate to="/" />} />
           <Route path="/Help" element={<Help />}/>
-          <Route path="/Calendar" element={<Calendar />}/>
+          {/* <Route path="/Calendar" element={<Calendar />}/> */}
+          <Route path="/Calendar" element={user ? <Calendar /> : <Navigate to="/" />} />
           <Route path="/CreateEvent" element={<CreateEvent />}/>
           <Route path="/ViewEvent" element={<ViewEvent />}/>
           <Route path="/CloseEvent" element={<CloseEvent />}/>

@@ -6,12 +6,12 @@ function MonthCalendar() {
             <div className="calendar_controls">
                 <div className="calendar_headings">
                     <i className="left_arrow" id="prev">&larr;</i>
-                    <h2 className ="month_year">May 2024</h2>
+                    <h2 className ="month_year">June 2024</h2>
                     <i className ="right_arrow" id ="next">&rarr;</i>
                 </div>
                 <div className = "current_datetime">
                     <p className ="daytxt">Today</p>
-                    <p className = "datetxt">Fri, 3, May 2024</p>
+                    <p className = "datetxt">Mon, 10, June 2024</p>
                 </div>
                 <div className ="days_date">
                         <ul className ="days">
@@ -33,14 +33,14 @@ function MonthCalendar() {
                             <li>7</li>
                             <li>8</li>
                             <li>9</li>
-                            <li>10</li>
+                            <li className = "active">10</li>
                             <li>11</li>
                             <li>12</li>
                             <li>13</li>
                             <li>14</li>
                             <li>15</li>
                             <li>16</li>
-                            <li className = "active">17</li>
+                            <li>17</li>
                             <li>18</li>
                             <li>19</li>
                             <li>20</li>
@@ -102,25 +102,25 @@ function Week(props) {
         <>
         <div className="curWeek">
         <div className="dayOfWeek">
-            <Day day = "Sunday" date="19" title="Book Club" />
+            <Day day = "Sunday" date="9" title="Book Club" />
         </div>
         <div className="dayOfWeek">
-            <Day day = "Monday" date="20" />
+            <Day day = "Monday" date="10" />
         </div>
         <div className="dayOfWeek">
-            <Day day = "Tuesday" date="21" />
+            <Day day = "Tuesday" date="11" />
         </div>
         <div className="dayOfWeek">
-            <Day day = "Wednesday" date="22" />
+            <Day day = "Wednesday" date="12" />
         </div>
         <div className="dayOfWeek">
-            <Day day = "Thursday" date="23" title="Dentist Appt" />
+            <Day day = "Thursday" date="13" title="Dentist Appt" />
         </div>
         <div className="dayOfWeek">
-            <Day day = "Friday" date="24" />
+            <Day day = "Friday" date="14" />
         </div>
         <div className="dayOfWeek">
-            <Day day = "Saturday" date="25" />
+            <Day day = "Saturday" date="15" />
         </div>
         </div>
         </>

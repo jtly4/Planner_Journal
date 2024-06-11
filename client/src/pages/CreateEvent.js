@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from "axios"
-  
+import { useEventsContext } from "../hooks/useEventsContext"
+// import { useAuthContext } from '../hooks/useAuthContext'
 
 function MyForm() {
     const [title, setTitle] = useState('')
@@ -21,32 +22,10 @@ function MyForm() {
     const [expenses, setExpenses] = useState('')
     const [split, setSplit] = useState('')
     const [error, setError] = useState(null)
-
+    const [emptyFields, setEmptyFields] = useState([])
     
-    // const [input, setInput] = useState({
-    //     title: '',
-    //     date:'',
-    //     startTime:'',
-    //     endTime:'',
-    //     description:'',
-    //     location:'',
-    //     toDoOne:'',
-    //     toDoTwo:'',
-    //     toDoThree:'',
-    //     who:'',
-    //     transportation:''
-    // })
-
-    // function handleChange(event) {
-    //     const {name, value} = event.target
-        
-    //     setInput( prevInput => {
-    //         return {
-    //             ...prevInput,  ///// ???????????
-    //             [name]: value
-    //         }
-    //     })
-    // }
+    const { dispatch } = useEventsContext()
+    // const { user } = useAuthContext()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -55,6 +34,10 @@ function MyForm() {
             title, date, startTime, endTime, description, location, who, toDoOne, toDoTwo, toDoThree, transportation, 
             isClosed, rating, image, reflection, expenses, split
         )
+        // if(!user) {
+        //     setError('You must be logged in')
+        //     return 
+        // }
         const newEvent = {
             title, date, startTime, endTime, description, location, who, toDoOne, toDoTwo, toDoThree, transportation, 
             isClosed, rating, image, reflection, expenses, split
@@ -63,12 +46,14 @@ function MyForm() {
             method: 'POST',
             body: JSON.stringify(newEvent),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                // 'Authorization': `Bearer ${user.token}`
             }
         })
         const json = await response.json()
         if(!response.ok) {
             setError(json.error)
+            setEmptyFields(json.emptyFields)
         }
         if(response.ook) {
             setTitle('')
@@ -83,26 +68,12 @@ function MyForm() {
             setWho('')
             setTransportation('')
             setError(null)
+            dispatch({type: 'CREATE_WORKOUT', payload: json})
             console.log('New event added', json)
         }
-        // event.preventDefualt()
-        // console.log(input)
-        // const newEvent = {
-        //     title: input.title,
-        //     date: input.date,
-        //     startTime: input.startTime,
-        //     endTime: input.endTime,
-        //     description: input.description,
-        //     location: input.location,
-        //     toDoOne: input.toDoOne,
-        //     toDoTwo: input.toDoTwo,
-        //     toDoThree: input.toDoThree,
-        //     who: input.who,
-        //     transportation: input.transportation
-        // }
-        // axios.post("http://localhost:5000/create", newEvent)
     }
-  
+
+
     return (
         // <form onSubmit={handleClick} action="/event_form" method="POST" className ='create-event-form'>
         <form>    
